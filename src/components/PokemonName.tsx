@@ -24,7 +24,7 @@ export const PokemonName = () => {
         <div className='pokemonName'>
           
            
-            <h1 className=''>{pokemon?.name.toUpperCase()} N.º{pokemon?.id}</h1>
+            <h1 style={{fontWeight:800}}>{pokemon?.name.toUpperCase()} N.º{pokemon?.id}</h1>
             
             <img className='imgPokemon' src={pokemon?.imgsrc} alt={pokemon?.name} />
             <div className='divTipos'>
@@ -36,7 +36,7 @@ export const PokemonName = () => {
                                      </div>
                         ))}</div>
             <div  className='estadisticas'>
-            <h2>Estadisticas</h2>
+            <h2>Estadísticas</h2>
             <div>Attack: {pokemon?.attack} </div>  
             <div>Special Attack: {pokemon?.spAttack} </div>  
             <div>Defense: {pokemon?.defense}</div>

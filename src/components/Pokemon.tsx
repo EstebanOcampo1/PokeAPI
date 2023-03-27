@@ -23,18 +23,21 @@ export const Pokemon = () => {
   return (
     
     <>
+    
+    <body className='miHtml'>
     <Header query={query} setquery={setquery}/>
         <div className='contenedor'>
             <div className='row pokedex'>
                 {filterPokemon?.slice(0,493).map((poke:any) =>(
-                     <div className='col-4 divPokemon'>
+                     <div className='col-3 divPokemon'>
                         
                         <h2>{poke.id}</h2>
-                        <img src={poke.imgsrc} className='listIcon'/>
+                        <img src={poke.imgsrc} alt={poke.name} className='listIcon'/>
                         <Link to={`/pokemons/${poke.name.toLowerCase()}`} className='listItem' key={poke.id}>
                         <h4>{poke.name.toUpperCase()}</h4>
                         </Link>
                         <div className='divTipos'>
+                          
                         {poke.types.map((type:any) =>(
                                     <div className='tipo'>
                                      {
@@ -48,6 +51,8 @@ export const Pokemon = () => {
             </div>
             
         </div>
+        </body>
+       
     </>
   )
 }
